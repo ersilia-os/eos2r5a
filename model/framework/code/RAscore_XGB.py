@@ -1,4 +1,5 @@
 import os
+import pathlib
 import numpy as np
 import pickle
 
@@ -26,8 +27,8 @@ class RAScorerXGB:
         :param model_path: path to the XGBoost model (.pkl) file
         :type model_path: pkl
         """
-        HERE = os.path.abspath(os.path.dirname(__file__))
-        MODEL = os.path.join(HERE, "models/XGB_chembl_ecfp_counts/model.pkl")
+        MODEL= os.path.join(pathlib.Path(os.path.dirname(__file__)).parent.parent, 'checkpoints/XGB_chembl_ecfp_counts/model.pkl')
+        print(MODEL)
         if model_path == None:
             self.xgb_model = pickle.load(open(MODEL, "rb"))
         else:
