@@ -23,6 +23,9 @@ Retrosynthetic accessibility score based on the computer aided synthesis plannin
 * [Source Code](https://github.com/reymond-group/RAscore)
 * Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
 
+## Ersilia model URLs
+* [GitHub](https://github.com/ersilia-os/eos2r5a)
+
 ## Citation
 
 If you use this model, please cite the [original authors](https://pubs.rsc.org/en/content/articlelanding/2021/sc/d0sc05401a) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
