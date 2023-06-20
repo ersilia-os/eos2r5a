@@ -27,5 +27,10 @@
     "Publication": "https://pubs.rsc.org/en/content/articlelanding/2021/sc/d0sc05401a",
     "Source Code": "https://github.com/reymond-group/RAscore",
     "License": "MIT",
-    "Contributor": "miquelduranfrigola"
+    "Contributor": "miquelduranfrigola",
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2r5a.zip",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos2r5a",
+    "Docker Architecture": [
+        "AMD64"
+    ]
 }
