@@ -1,0 +1,514 @@
+11:02:42 | DEBUG    | Repo path specified: /home/muobo/tasks/eos2r5a
+11:02:42 | DEBUG    | Absolute path: /home/muobo/tasks/eos2r5a
+⬇️  Fetching model eos2r5a: retrosynthetic-accessibility
+11:02:43 | DEBUG    | Initialized with URL: None
+11:02:43 | DEBUG    | Getting model source
+11:02:43 | DEBUG    | Model getting fetched from Local Repository
+11:02:43 | INFO     | Model doesn't exist on your system, fetching it now.
+11:02:43 | DEBUG    | Starting fetching procedure
+11:02:43 | DEBUG    | Fetching in your system, not from DockerHub
+11:02:43 | DEBUG    | Deciding fetcher (BentoML or FastAPI)
+11:02:43 | DEBUG    | No run columns file
+11:02:43 | DEBUG    | Fetching using BentoML
+11:02:43 | DEBUG    | Checking if the model is installable with BentoML
+11:02:43 | DEBUG    | Starting fetching procedure
+11:02:43 | INFO     | GitHub CLI is not installed. Ersilia can work without it, but we highly recommend that you install this tool.
+11:02:43 | DEBUG    | Checking Git LFS
+11:02:43 | DEBUG    | Git LFS is installed
+11:02:43 | DEBUG    | Git LFS has been activated
+11:02:44 | DEBUG    | Connected to the internet
+11:02:44 | DEBUG    | Conda is installed
+11:02:44 | DEBUG    | EOS Home path exists
+11:02:44 | INFO     | Starting delete of model eos2r5a
+11:02:44 | INFO     | Removing EOS folder /home/muobo/eos/dest/eos2r5a
+11:02:44 | INFO     | Removing bento folder first /home/muobo/bentoml/repository/eos2r5a/20250408110110_21C723
+11:02:44 | INFO     | Removing bundle folder /home/muobo/eos/repository/eos2r5a
+11:02:44 | DEBUG    | Folder removed
+11:02:44 | DEBUG    | Attempting Bento delete
+11:02:44 | DEBUG    | Looking for BentoML catalog
+11:02:49 | DEBUG    | No BentoML Catalog available
+11:02:49 | INFO     | Deleting conda environment eos2r5a
+11:02:58 | DEBUG    | Attempting temporary folder delete
+11:02:58 | DEBUG    | Attempting lake delete (local)
+11:02:58 | DEBUG    | Deleting /home/muobo/eos/isaura/lake/eos2r5a_local.h5
+11:02:58 | DEBUG    | Attempting lake delete (public)
+11:02:58 | DEBUG    | Deleting /home/muobo/eos/isaura/lake/eos2r5a_public.h5
+11:02:59 | INFO     | Removing docker images and stopping containers related to eos2r5a
+11:02:59 | DEBUG    | Running docker images > /tmp/ersilia-ap6klmad/docker-images.txt
+11:02:59 | DEBUG    | Model entry eos2r5a was not available in the fetched models registry
+11:02:59 | SUCCESS  | Model eos2r5a deleted successfully
+11:02:59 | DEBUG    | Getting repository
+11:02:59 | DEBUG    | Preparing inner template if necessary
+11:02:59 | DEBUG    | The pack.py file already exists
+11:02:59 | DEBUG    | The Dockerfile file already exists
+11:02:59 | DEBUG    | The src folder already exists
+11:02:59 | DEBUG    | Changing python version if necessary
+11:02:59 | DEBUG    | {'version': '0.11.0', 'slim': False, 'python': 'py38'}
+11:02:59 | DEBUG    | User is not root
+11:02:59 | DEBUG    | Copying example file if available
+11:02:59 | DEBUG    | Example file exists
+11:02:59 | DEBUG    | Done getting model
+11:02:59 | DEBUG    | Check if model can be run with vanilla (system) code (i.e. dockerfile has no installs)
+11:02:59 | DEBUG    | Check bentoml and python version
+11:02:59 | INFO     | BentoML version {'version': '0.11.0', 'slim': False, 'python': 'py38'}
+11:02:59 | DEBUG    | Custom Ersilia BentoML is used, no need for modifying protobuf version
+11:02:59 | DEBUG    | Model needs some installs
+11:02:59 | DEBUG    | Checking if only python/conda install will be sufficient
+11:02:59 | DEBUG    | Mode: conda
+11:02:59 | DEBUG    | BentoML path exists! Removing it: /home/muobo/bentoml/repository/eos2r5a
+11:02:59 | DEBUG    | Attempting Bento delete
+11:02:59 | DEBUG    | Looking for BentoML catalog
+11:03:04 | DEBUG    | No BentoML Catalog available
+11:03:04 | DEBUG    | Trying to remove path: /home/muobo/bentoml/repository/eos2r5a
+11:03:04 | DEBUG    | ...successfully
+11:03:04 | DEBUG    | Initializing conda packer
+11:03:04 | DEBUG    | Packing model with Conda
+11:03:04 | DEBUG    | Writing install commands
+11:03:04 | DEBUG    | Run commands: ['pip install rdkit==2023.3.2', 'pip install xgboost==1.2.0', 'pip install scikit-learn==1.0.1', 'pip install numpy==1.21.6']
+11:03:04 | DEBUG    | Writing install commands in /home/muobo/eos/dest/eos2r5a/model_install_commands.sh
+11:03:04 | DEBUG    | Setting up
+11:03:04 | DEBUG    | Installs file /home/muobo/eos/dest/eos2r5a/model_install_commands.sh
+11:03:04 | DEBUG    | Conda environment eos2r5a
+11:03:06 | DEBUG    | Environment eos2r5a does not exist
+11:03:08 | INFO     | Cloning base conda environment and adding model dependencies
+11:03:25 | DEBUG    | Run commandlines on eos2r5a
+11:03:25 | DEBUG    | python -m pip --disable-pip-version-check install rdkit==2023.3.2
+python -m pip --disable-pip-version-check install xgboost==1.2.0
+python -m pip --disable-pip-version-check install scikit-learn==1.0.1
+python -m pip --disable-pip-version-check install numpy==1.21.6
+python -m pip --disable-pip-version-check install git+https://github.com/ersilia-os/bentoml-ersilia.git
+
+11:03:27 | DEBUG    | Activating base environment
+11:03:27 | DEBUG    | Current working directory: /home/muobo/eos/dest/eos2r5a
+11:03:27 | DEBUG    | Running bash /tmp/ersilia-lz57928f/script.sh 2>&1 | tee -a /tmp/ersilia-5_jqxqz7/command_outputs.log
+Updated Git hooks.
+Git LFS initialized.
+Remove all packages in environment /home/muobo/miniconda3/envs/eos2r5a:
+
+
+## Package Plan ##
+
+  environment location: /home/muobo/miniconda3/envs/eos2r5a
+
+
+The following packages will be REMOVED:
+
+  _libgcc_mutex-0.1-main
+  _openmp_mutex-5.1-1_gnu
+  ca-certificates-2025.2.25-h06a4308_0
+  ld_impl_linux-64-2.40-h12ee557_0
+  libffi-3.4.4-h6a678d5_1
+  libgcc-ng-11.2.0-h1234567_1
+  libgomp-11.2.0-h1234567_1
+  libstdcxx-ng-11.2.0-h1234567_1
+  ncurses-6.4-h6a678d5_0
+  openssl-3.0.16-h5eee18b_0
+  pip-24.2-py38h06a4308_0
+  python-3.8.20-he870216_0
+  readline-8.2-h5eee18b_0
+  setuptools-75.1.0-py38h06a4308_0
+  sqlite-3.45.3-h5eee18b_0
+  tk-8.6.14-h39e8969_0
+  wheel-0.44.0-py38h06a4308_0
+  xz-5.6.4-h5eee18b_1
+  zlib-1.2.13-h5eee18b_1
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - done
+Verifying transaction: | done
+Executing transaction: - \ | / - done
+Total reclaimed space: 0B
+Source:      /home/muobo/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+Destination: /home/muobo/miniconda3/envs/eos2r5a
+Packages: 19
+Files: 6204
+
+Downloading and Extracting Packages: ...working... done
+
+## Package Plan ##
+
+  environment location: /home/muobo/miniconda3/envs/eos2r5a
+
+  added / updated specs:
+    - defaults/linux-64::_libgcc_mutex==0.1=main
+    - defaults/linux-64::_openmp_mutex==5.1=1_gnu
+    - defaults/linux-64::ca-certificates==2025.2.25=h06a4308_0
+    - defaults/linux-64::ld_impl_linux-64==2.40=h12ee557_0
+    - defaults/linux-64::libffi==3.4.4=h6a678d5_1
+    - defaults/linux-64::libgcc-ng==11.2.0=h1234567_1
+    - defaults/linux-64::libgomp==11.2.0=h1234567_1
+    - defaults/linux-64::libstdcxx-ng==11.2.0=h1234567_1
+    - defaults/linux-64::ncurses==6.4=h6a678d5_0
+    - defaults/linux-64::openssl==3.0.16=h5eee18b_0
+    - defaults/linux-64::pip==24.2=py38h06a4308_0
+    - defaults/linux-64::python==3.8.20=he870216_0
+    - defaults/linux-64::readline==8.2=h5eee18b_0
+    - defaults/linux-64::setuptools==75.1.0=py38h06a4308_0
+    - defaults/linux-64::sqlite==3.45.3=h5eee18b_0
+    - defaults/linux-64::tk==8.6.14=h39e8969_0
+    - defaults/linux-64::wheel==0.44.0=py38h06a4308_0
+    - defaults/linux-64::xz==5.6.4=h5eee18b_1
+    - defaults/linux-64::zlib==1.2.13=h5eee18b_1
+
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu 
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2025.2.25-h06a4308_0 
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.40-h12ee557_0 
+  libffi             pkgs/main/linux-64::libffi-3.4.4-h6a678d5_1 
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1 
+  libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1 
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1 
+  ncurses            pkgs/main/linux-64::ncurses-6.4-h6a678d5_0 
+  openssl            pkgs/main/linux-64::openssl-3.0.16-h5eee18b_0 
+  pip                pkgs/main/linux-64::pip-24.2-py38h06a4308_0 
+  python             pkgs/main/linux-64::python-3.8.20-he870216_0 
+  readline           pkgs/main/linux-64::readline-8.2-h5eee18b_0 
+  setuptools         pkgs/main/linux-64::setuptools-75.1.0-py38h06a4308_0 
+  sqlite             pkgs/main/linux-64::sqlite-3.45.3-h5eee18b_0 
+  tk                 pkgs/main/linux-64::tk-8.6.14-h39e8969_0 
+  wheel              pkgs/main/linux-64::wheel-0.44.0-py38h06a4308_0 
+  xz                 pkgs/main/linux-64::xz-5.6.4-h5eee18b_1 
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_1 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - \ | / done
+Verifying transaction: \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+Executing transaction: - \ | / - \ | / - \ | done
+#
+# To activate this environment, use
+#
+#     $ conda activate eos2r5a
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+Collecting rdkit==2023.3.2
+  Using cached rdkit-2023.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.9 kB)
+Requirement already satisfied: numpy in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from rdkit==2023.3.2) (1.24.4)
+Collecting Pillow (from rdkit==2023.3.2)
+  Using cached pillow-10.4.0-cp38-cp38-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+Using cached rdkit-2023.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.7 MB)
+Using cached pillow-10.4.0-cp38-cp38-manylinux_2_28_x86_64.whl (4.5 MB)
+Installing collected packages: Pillow, rdkit
+Successfully installed Pillow-10.4.0 rdkit-2023.3.2
+Collecting xgboost==1.2.0
+  Using cached xgboost-1.2.0-py3-none-manylinux2010_x86_64.whl.metadata (1.7 kB)
+Requirement already satisfied: numpy in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from xgboost==1.2.0) (1.24.4)
+Collecting scipy (from xgboost==1.2.0)
+  Using cached scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (58 kB)
+Using cached xgboost-1.2.0-py3-none-manylinux2010_x86_64.whl (148.9 MB)
+Using cached scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.5 MB)
+Installing collected packages: scipy, xgboost
+Successfully installed scipy-1.10.1 xgboost-1.2.0
+Collecting scikit-learn==1.0.1
+  Using cached scikit_learn-1.0.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (10 kB)
+Requirement already satisfied: numpy>=1.14.6 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from scikit-learn==1.0.1) (1.24.4)
+Requirement already satisfied: scipy>=1.1.0 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from scikit-learn==1.0.1) (1.10.1)
+Collecting joblib>=0.11 (from scikit-learn==1.0.1)
+  Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl>=2.0.0 (from scikit-learn==1.0.1)
+  Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+Using cached scikit_learn-1.0.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (25.9 MB)
+Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Installing collected packages: threadpoolctl, joblib, scikit-learn
+Successfully installed joblib-1.4.2 scikit-learn-1.0.1 threadpoolctl-3.5.0
+Collecting numpy==1.21.6
+  Using cached numpy-1.21.6-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (2.1 kB)
+Using cached numpy-1.21.6-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (15.7 MB)
+Installing collected packages: numpy
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.24.4
+    Uninstalling numpy-1.24.4:
+      Successfully uninstalled numpy-1.24.4
+Successfully installed numpy-1.21.6
+Collecting git+https://github.com/ersilia-os/bentoml-ersilia.git
+  Cloning https://github.com/ersilia-os/bentoml-ersilia.git to /tmp/pip-req-build-077axf7b
+  Running command git clone --filter=blob:none --quiet https://github.com/ersilia-os/bentoml-ersilia.git /tmp/pip-req-build-077axf7b
+  Resolved https://github.com/ersilia-os/bentoml-ersilia.git to commit d9d9f342294da3f1a69c9e81adb17f77bc010aac
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: docker in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (7.1.0)
+Requirement already satisfied: alembic in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (1.14.1)
+Requirement already satisfied: packaging in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (24.2)
+Requirement already satisfied: boto3 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (1.37.29)
+Requirement already satisfied: psutil in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (7.0.0)
+Requirement already satisfied: cerberus in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (1.3.7)
+Requirement already satisfied: sqlalchemy in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (2.0.40)
+Requirement already satisfied: sqlalchemy-utils in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (0.41.2)
+Requirement already satisfied: tabulate in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (0.9.0)
+Requirement already satisfied: humanfriendly in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (10.0)
+Requirement already satisfied: flask in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (3.0.3)
+Requirement already satisfied: chardet in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (5.2.0)
+Requirement already satisfied: numpy in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (1.21.6)
+Requirement already satisfied: multidict in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (6.1.0)
+Requirement already satisfied: requests in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (2.32.3)
+Requirement already satisfied: python-json-logger in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (3.3.0)
+Requirement already satisfied: ruamel.yaml in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (0.18.10)
+Requirement already satisfied: werkzeug in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (3.0.6)
+Requirement already satisfied: protobuf<3.19,>=3.8.0 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (3.18.3)
+Requirement already satisfied: prometheus-client in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (0.21.1)
+Requirement already satisfied: Mako in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from alembic->bentoml==0.11.0) (1.3.9)
+Requirement already satisfied: importlib-metadata in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from alembic->bentoml==0.11.0) (8.5.0)
+Requirement already satisfied: importlib-resources in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from alembic->bentoml==0.11.0) (6.4.5)
+Requirement already satisfied: typing-extensions>=4 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from alembic->bentoml==0.11.0) (4.13.1)
+Requirement already satisfied: greenlet>=1 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from sqlalchemy->bentoml==0.11.0) (3.1.1)
+Requirement already satisfied: botocore<1.38.0,>=1.37.29 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from boto3->bentoml==0.11.0) (1.37.29)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from boto3->bentoml==0.11.0) (1.0.1)
+Requirement already satisfied: s3transfer<0.12.0,>=0.11.0 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from boto3->bentoml==0.11.0) (0.11.4)
+Requirement already satisfied: urllib3>=1.26.0 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from docker->bentoml==0.11.0) (1.26.20)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from requests->bentoml==0.11.0) (3.4.1)
+Requirement already satisfied: idna<4,>=2.5 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from requests->bentoml==0.11.0) (3.10)
+Requirement already satisfied: certifi>=2017.4.17 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from requests->bentoml==0.11.0) (2025.1.31)
+Requirement already satisfied: Jinja2>=3.1.2 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from flask->bentoml==0.11.0) (3.1.6)
+Requirement already satisfied: itsdangerous>=2.1.2 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from flask->bentoml==0.11.0) (2.2.0)
+Requirement already satisfied: click>=8.1.3 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from flask->bentoml==0.11.0) (8.1.8)
+Requirement already satisfied: blinker>=1.6.2 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from flask->bentoml==0.11.0) (1.8.2)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from werkzeug->bentoml==0.11.0) (2.1.5)
+Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from ruamel.yaml->bentoml==0.11.0) (0.2.8)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from botocore<1.38.0,>=1.37.29->boto3->bentoml==0.11.0) (2.9.0.post0)
+Requirement already satisfied: zipp>=3.20 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from importlib-metadata->alembic->bentoml==0.11.0) (3.20.2)
+Requirement already satisfied: six>=1.5 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.38.0,>=1.37.29->boto3->bentoml==0.11.0) (1.17.0)11:04:24 | DEBUG    | Collecting rdkit==2023.3.2
+  Using cached rdkit-2023.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.9 kB)
+Requirement already satisfied: numpy in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from rdkit==2023.3.2) (1.24.4)
+Collecting Pillow (from rdkit==2023.3.2)
+  Using cached pillow-10.4.0-cp38-cp38-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+Using cached rdkit-2023.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.7 MB)
+Using cached pillow-10.4.0-cp38-cp38-manylinux_2_28_x86_64.whl (4.5 MB)
+Installing collected packages: Pillow, rdkit
+Successfully installed Pillow-10.4.0 rdkit-2023.3.2
+Collecting xgboost==1.2.0
+  Using cached xgboost-1.2.0-py3-none-manylinux2010_x86_64.whl.metadata (1.7 kB)
+Requirement already satisfied: numpy in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from xgboost==1.2.0) (1.24.4)
+Collecting scipy (from xgboost==1.2.0)
+  Using cached scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (58 kB)
+Using cached xgboost-1.2.0-py3-none-manylinux2010_x86_64.whl (148.9 MB)
+Using cached scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.5 MB)
+Installing collected packages: scipy, xgboost
+Successfully installed scipy-1.10.1 xgboost-1.2.0
+Collecting scikit-learn==1.0.1
+  Using cached scikit_learn-1.0.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (10 kB)
+Requirement already satisfied: numpy>=1.14.6 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from scikit-learn==1.0.1) (1.24.4)
+Requirement already satisfied: scipy>=1.1.0 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from scikit-learn==1.0.1) (1.10.1)
+Collecting joblib>=0.11 (from scikit-learn==1.0.1)
+  Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl>=2.0.0 (from scikit-learn==1.0.1)
+  Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+Using cached scikit_learn-1.0.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (25.9 MB)
+Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Installing collected packages: threadpoolctl, joblib, scikit-learn
+Successfully installed joblib-1.4.2 scikit-learn-1.0.1 threadpoolctl-3.5.0
+Collecting numpy==1.21.6
+  Using cached numpy-1.21.6-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (2.1 kB)
+Using cached numpy-1.21.6-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (15.7 MB)
+Installing collected packages: numpy
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.24.4
+    Uninstalling numpy-1.24.4:
+      Successfully uninstalled numpy-1.24.4
+Successfully installed numpy-1.21.6
+Collecting git+https://github.com/ersilia-os/bentoml-ersilia.git
+  Cloning https://github.com/ersilia-os/bentoml-ersilia.git to /tmp/pip-req-build-077axf7b
+  Running command git clone --filter=blob:none --quiet https://github.com/ersilia-os/bentoml-ersilia.git /tmp/pip-req-build-077axf7b
+  Resolved https://github.com/ersilia-os/bentoml-ersilia.git to commit d9d9f342294da3f1a69c9e81adb17f77bc010aac
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: docker in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (7.1.0)
+Requirement already satisfied: alembic in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (1.14.1)
+Requirement already satisfied: packaging in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (24.2)
+Requirement already satisfied: boto3 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (1.37.29)
+Requirement already satisfied: psutil in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (7.0.0)
+Requirement already satisfied: cerberus in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (1.3.7)
+Requirement already satisfied: sqlalchemy in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (2.0.40)
+Requirement already satisfied: sqlalchemy-utils in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (0.41.2)
+Requirement already satisfied: tabulate in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (0.9.0)
+Requirement already satisfied: humanfriendly in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (10.0)
+Requirement already satisfied: flask in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (3.0.3)
+Requirement already satisfied: chardet in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (5.2.0)
+Requirement already satisfied: numpy in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (1.21.6)
+Requirement already satisfied: multidict in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (6.1.0)
+Requirement already satisfied: requests in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (2.32.3)
+Requirement already satisfied: python-json-logger in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (3.3.0)
+Requirement already satisfied: ruamel.yaml in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (0.18.10)
+Requirement already satisfied: werkzeug in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (3.0.6)
+Requirement already satisfied: protobuf<3.19,>=3.8.0 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (3.18.3)
+Requirement already satisfied: prometheus-client in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from bentoml==0.11.0) (0.21.1)
+Requirement already satisfied: Mako in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from alembic->bentoml==0.11.0) (1.3.9)
+Requirement already satisfied: importlib-metadata in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from alembic->bentoml==0.11.0) (8.5.0)
+Requirement already satisfied: importlib-resources in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from alembic->bentoml==0.11.0) (6.4.5)
+Requirement already satisfied: typing-extensions>=4 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from alembic->bentoml==0.11.0) (4.13.1)
+Requirement already satisfied: greenlet>=1 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from sqlalchemy->bentoml==0.11.0) (3.1.1)
+Requirement already satisfied: botocore<1.38.0,>=1.37.29 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from boto3->bentoml==0.11.0) (1.37.29)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from boto3->bentoml==0.11.0) (1.0.1)
+Requirement already satisfied: s3transfer<0.12.0,>=0.11.0 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from boto3->bentoml==0.11.0) (0.11.4)
+Requirement already satisfied: urllib3>=1.26.0 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from docker->bentoml==0.11.0) (1.26.20)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from requests->bentoml==0.11.0) (3.4.1)
+Requirement already satisfied: idna<4,>=2.5 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from requests->bentoml==0.11.0) (3.10)
+Requirement already satisfied: certifi>=2017.4.17 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from requests->bentoml==0.11.0) (2025.1.31)
+Requirement already satisfied: Jinja2>=3.1.2 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from flask->bentoml==0.11.0) (3.1.6)
+Requirement already satisfied: itsdangerous>=2.1.2 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from flask->bentoml==0.11.0) (2.2.0)
+Requirement already satisfied: click>=8.1.3 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from flask->bentoml==0.11.0) (8.1.8)
+Requirement already satisfied: blinker>=1.6.2 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from flask->bentoml==0.11.0) (1.8.2)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from werkzeug->bentoml==0.11.0) (2.1.5)
+Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from ruamel.yaml->bentoml==0.11.0) (0.2.8)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from botocore<1.38.0,>=1.37.29->boto3->bentoml==0.11.0) (2.9.0.post0)
+Requirement already satisfied: zipp>=3.20 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from importlib-metadata->alembic->bentoml==0.11.0) (3.20.2)
+Requirement already satisfied: six>=1.5 in /home/muobo/miniconda3/envs/eos2r5a/lib/python3.8/site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.38.0,>=1.37.29->boto3->bentoml==0.11.0) (1.17.0)
+
+11:04:24 | DEBUG    | Activation done
+11:04:24 | DEBUG    | Creating environment YAML file
+11:04:31 | DEBUG    | Storing Conda environment in the local environment database
+11:04:31 | DEBUG    | Done with the Conda setup
+11:04:33 | DEBUG    | Using environment eos2r5a
+11:04:33 | DEBUG    | Running command: python pack.py
+11:04:34 | DEBUG    | Run commandlines on eos2r5a
+11:04:34 | DEBUG    | 
+        python pack.py
+        
+11:04:36 | DEBUG    | Activating base environment
+11:04:36 | DEBUG    | Current working directory: /home/muobo/eos/dest/eos2r5a
+11:04:36 | DEBUG    | Running bash /tmp/ersilia-ojkox_kd/script.sh 2>&1 | tee -a /tmp/ersilia-lx18ejre/command_outputs.log
+11:04:42 | DEBUG    | [2025-04-08 11:04:42,195] INFO - BentoService bundle 'eos2r5a:20250408110440_CEA9EF' saved to: /home/muobo/bentoml/repository/eos2r5a/20250408110440_CEA9EF
+
+11:04:42 | DEBUG    | Activation done
+11:04:42 | DEBUG    | Previous command successfully run inside eos2r5a conda environment
+11:04:42 | DEBUG    | Now trying to establish symlinks
+11:04:42 | DEBUG    | BentoML location is /home/muobo/bentoml/repository/eos2r5a/20250408110440_CEA9EF
+11:04:42 | DEBUG    | Ersilia Bento location is /home/muobo/eos/repository/eos2r5a/20250408110440_CEA9EF
+11:04:42 | DEBUG    | Building symlinks between /home/muobo/eos/repository/eos2r5a/20250408110440_CEA9EF and /home/muobo/bentoml/repository/eos2r5a/20250408110440_CEA9EF
+11:04:42 | DEBUG    | Creating model symlink bundle artifacts > dest
+11:04:42 | DEBUG    | Creating model_install_commands.sh symlink dest <> bundle
+11:04:42 | INFO     | Could not create symbolic link from /home/muobo/eos/dest/eos2r5a/data.h5 to /home/muobo/eos/isaura/lake/eos2r5a_public.h5
+11:04:42 | DEBUG    | Run file found in framework: /home/muobo/eos/repository/eos2r5a/20250408110440_CEA9EF/eos2r5a/artifacts/framework/run.sh
+11:04:42 | DEBUG    | Run commandlines on eos2r5a
+11:04:42 | DEBUG    | which python > /tmp/ersilia-_mrltlmj/tmp.txt
+11:04:44 | DEBUG    | Activating base environment
+11:04:44 | DEBUG    | Current working directory: /home/muobo/tasks/eos2r5a
+11:04:44 | DEBUG    | Running bash /tmp/ersilia-8prt7sco/script.sh 2>&1 | tee -a /tmp/ersilia-rlwkv4hm/command_outputs.log
+11:04:46 | DEBUG    | 
+11:04:46 | DEBUG    | Activation done
+11:04:46 | DEBUG    | Python executable: /home/muobo/miniconda3/envs/eos2r5a/bin/python
+11:04:46 | DEBUG    | Conda is needed
+11:04:46 | DEBUG    | Writing pack method bentoml to file pack_method.txt
+11:04:46 | DEBUG    | Checking if model needs to be integrated to a tool
+11:04:46 | DEBUG    | Getting model card of eos2r5a
+11:04:46 | DEBUG    | Trying to get metadata from: /home/muobo/eos/dest/eos2r5a
+11:04:46 | DEBUG    | Card saved at /home/muobo/eos/dest/eos2r5a/card.json
+11:04:46 | DEBUG    | Saving slug retrosynthetic-accessibility
+11:04:46 | DEBUG    | Checking that autoservice works
+11:04:46 | DEBUG    | Setting autoservice for eos2r5a
+11:04:46 | INFO     | Docker is available and running.
+11:04:46 | DEBUG    | No service class provided, deciding automatically
+11:04:46 | DEBUG    | No service class file exists in /home/muobo/eos/repository/eos2r5a/20250408110440_CEA9EF/service_class.txt
+11:04:46 | DEBUG    | Pack method is: bentoml
+11:04:46 | DEBUG    | Pack method is: bentoml
+11:04:46 | DEBUG    | Setting virtual environment at /home/muobo/eos/dest/eos2r5a
+11:04:46 | DEBUG    | Pack method is: bentoml
+11:04:48 | DEBUG    | Pack method is: bentoml
+11:04:48 | DEBUG    | Service class: conda
+11:04:48 | DEBUG    | Getting APIs from list file
+11:04:48 | DEBUG    | Getting APIs from BentoML
+11:04:48 | DEBUG    | Getting APIs from Bento
+11:04:48 | DEBUG    | Getting info from BentoML and storing in /tmp/ersilia-o59o3qbb/information.json
+11:04:53 | DEBUG    | Initializing model for inferring its structure
+11:04:53 | DEBUG    | No status file exists
+11:04:53 | DEBUG    | Is fetched: False
+11:04:53 | DEBUG    | Schema not yet available
+11:04:53 | DEBUG    | Setting autoservice for eos2r5a
+11:04:54 | INFO     | Docker is available and running.
+11:04:54 | DEBUG    | No service class provided, deciding automatically
+11:04:54 | DEBUG    | Service class file exists in folder /home/muobo/eos/repository/eos2r5a/20250408110440_CEA9EF/service_class.txt
+11:04:54 | DEBUG    | Service class: conda
+11:04:54 | DEBUG    | Pack method is: bentoml
+11:04:54 | INFO     | Done with initialization!
+11:04:54 | DEBUG    | Model successfully initialized in sniffer
+11:04:54 | DEBUG    | Built-in example found
+
+[2025-04-08 11:04:42,195] INFO - BentoService bundle 'eos2r5a:20250408110440_CEA9EF' saved to: /home/muobo/bentoml/repository/eos2r5a/20250408110440_CEA9EF
+🚨🚨🚨 Something went wrong with Ersilia 🚨🚨🚨
+
+Error message:
+
+
+If this error message is not helpful, open an issue at:
+ - https://github.com/ersilia-os/ersilia
+Or feel free to reach out to us at:
+ - hello[at]ersilia.io
+
+If you haven't, try to run your command in verbose mode (-v in the CLI)
+ - You will find the console log file in: /home/muobo/eos/current.log
+Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<ModelFetcher.fetch() done, defined at /home/muobo/ersilia/ersilia/hub/fetch/fetch.py:341> exception=SystemExit(1)>
+Traceback (most recent call last):
+  File "/home/muobo/ersilia/ersilia/utils/exceptions_utils/throw_ersilia_exception.py", line 25, in inner_function
+    return func(*args, **kwargs)
+  File "/home/muobo/ersilia/ersilia/hub/fetch/fetch.py", line 195, in _fetch_from_bentoml
+    mf.fetch(model_id=self.model_id)
+  File "/home/muobo/ersilia/ersilia/hub/fetch/fetch_bentoml.py", line 213, in fetch
+    self._fetch(model_id)
+  File "/home/muobo/ersilia/ersilia/hub/fetch/fetch_bentoml.py", line 171, in _fetch
+    self._fetch_not_from_dockerhub(model_id=model_id)
+  File "/home/muobo/ersilia/ersilia/hub/fetch/fetch_bentoml.py", line 155, in _fetch_not_from_dockerhub
+    self._sniff()
+  File "/home/muobo/ersilia/ersilia/hub/fetch/fetch_bentoml.py", line 130, in _sniff
+    sn = ModelSniffer(self.model_id, self.config_json)
+  File "/home/muobo/ersilia/ersilia/hub/fetch/actions/sniff_bentoml.py", line 125, in __init__
+    self.inputs = er.example()
+  File "/home/muobo/ersilia/ersilia/hub/fetch/actions/sniff_bentoml.py", line 89, in example
+    next(reader)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muobo/miniconda3/envs/myenv/lib/python3.9/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/muobo/miniconda3/envs/myenv/lib/python3.9/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/muobo/miniconda3/envs/myenv/lib/python3.9/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/muobo/miniconda3/envs/myenv/lib/python3.9/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/muobo/ersilia/ersilia/cli/commands/__init__.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/muobo/ersilia/ersilia/cli/commands/fetch.py", line 142, in fetch
+    fetch_result = _fetch(mf, model_id)
+  File "/home/muobo/ersilia/ersilia/cli/commands/fetch.py", line 37, in _fetch
+    res = asyncio.run(mf.fetch(model_id))
+  File "/home/muobo/miniconda3/envs/myenv/lib/python3.9/site-packages/nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+  File "/home/muobo/miniconda3/envs/myenv/lib/python3.9/site-packages/nest_asyncio.py", line 92, in run_until_complete
+    self._run_once()
+  File "/home/muobo/miniconda3/envs/myenv/lib/python3.9/site-packages/nest_asyncio.py", line 133, in _run_once
+    handle._run()
+  File "/home/muobo/miniconda3/envs/myenv/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/muobo/miniconda3/envs/myenv/lib/python3.9/asyncio/tasks.py", line 256, in __step
+    result = coro.send(None)
+  File "/home/muobo/ersilia/ersilia/hub/fetch/fetch.py", line 363, in fetch
+    fr = await self._fetch(model_id)
+  File "/home/muobo/ersilia/ersilia/hub/fetch/fetch.py", line 330, in _fetch
+    self._fetch_not_from_dockerhub(model_id=model_id)
+  File "/home/muobo/ersilia/ersilia/utils/exceptions_utils/throw_ersilia_exception.py", line 25, in inner_function
+    return func(*args, **kwargs)
+  File "/home/muobo/ersilia/ersilia/hub/fetch/fetch.py", line 224, in _fetch_not_from_dockerhub
+    self._fetch_from_bentoml()
+  File "/home/muobo/ersilia/ersilia/utils/exceptions_utils/throw_ersilia_exception.py", line 41, in inner_function
+    sys.exit(DEFAULT_ERSILIA_ERROR_EXIT_CODE)
+SystemExit: 1
