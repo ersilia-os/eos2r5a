@@ -1,0 +1,2 @@
+name,type,direction,description
+ra_score,float,high,Retrosynthetic accessibility score

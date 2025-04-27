@@ -7,4 +7,4 @@ RUN pip install scikit-learn==1.0.1
 RUN pip install numpy==1.21.6
 
 WORKDIR /repo
-COPY ./repo
+COPY . /repo
