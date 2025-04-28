@@ -1,6 +1,6 @@
 # Retrosynthetic accessibility score
 
-Retrosynthetic accessibility score based on the computer aided synthesis planning tool AiZynthFinder. The authors have selected a ChEMBL subset of 200.000 molecules, and checked whether AiZynthFinder could identify a synthetic route or not. This data has been trained to create a classifier that computes 4500 times faster than the underlying AiZynthFinder. Molecules outside the applicability domain, such as the GBD database, need to be fine tuned to their use case.
+Retrosynthetic accessibility score based on the computer aided synthesis planning tool AiZynthfinder. The authors have selected a ChEMBL subset of 200.000 molecules, and checked whether AiZinthFinder could identify a synthetic route or not. This data has been trained to create a classifier that computes 4500 times faster than the underlying AiZynthFinder. Molecules outside the applicability domain, such as the GBD database, need to be fine tuned to their use case.
 
 This model was incorporated on 2021-10-19.
 
