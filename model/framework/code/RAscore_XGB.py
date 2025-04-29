@@ -1,11 +1,10 @@
 import os
 import pathlib
 import numpy as np
-import pickle
+import xgboost as xgb
 
-from rdkit import Chem, DataStructs
+from rdkit import Chem
 from rdkit.Chem import AllChem
-from rdkit.DataStructs import cDataStructs
 
 
 class RAScorerXGB:
@@ -27,12 +26,13 @@ class RAScorerXGB:
         :param model_path: path to the XGBoost model (.pkl) file
         :type model_path: pkl
         """
-        MODEL= os.path.join(pathlib.Path(os.path.dirname(__file__)).parent.parent, 'checkpoints/XGB_chembl_ecfp_counts/model.pkl')
+        MODEL= os.path.join(pathlib.Path(os.path.dirname(__file__)).parent.parent, 'checkpoints/XGB_chembl_ecfp_counts/model.json')
         print(MODEL)
+        self.xgb_model = xgb.Booster()
         if model_path == None:
-            self.xgb_model = pickle.load(open(MODEL, "rb"))
+            self.xgb_model.load_model(MODEL)
         else:
-            self.xgb_model = pickle.load(open(model_path, "rb"))
+            self.xgb_model.load_model(model_path)
 
     def ecfp(self, smiles):
         """
@@ -62,6 +62,6 @@ class RAScorerXGB:
         :rtype: float
         """
         arr = self.ecfp(smiles)
-        proba = self.xgb_model.predict_proba(arr.reshape(1, -1))
-        return proba[0][1]
+        proba = self.xgb_model.predict(xgb.DMatrix(arr.reshape(1, -1)))
+        return proba[0]
 
