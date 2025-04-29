@@ -35,18 +35,18 @@ Below are the **Output Columns** of the model:
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos2r5a](https://hub.docker.com/r/ersiliaos/eos2r5a)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2r5a.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2r5a.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `47`
 - **Environment Size (Mb):** `1146`
-- **Image Size (Mb):** `1212.51`
+- **Image Size (Mb):** `1371.52`
 
 **Computational Performance (seconds):**
-- 4 inputs: `30.43`
-- 20 inputs: `20.21`
-- 100 inputs: `20.37`
+- 4 inputs: `32.07`
+- 20 inputs: `21.53`
+- 100 inputs: `22.37`
 
 ### References
 - **Source Code**: [https://github.com/reymond-group/RAscore](https://github.com/reymond-group/RAscore)
