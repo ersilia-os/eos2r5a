@@ -40,16 +40,19 @@
     "Incorporation Date": "2021-10-19",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2r5a.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos2r5a",
-    "Docker Architecture": "AMD64",
+    "Docker Architecture": [
+        "AMD64",
+        "ARM64"
+    ],
     "Docker Pack Method": "FastAPI",
     "Model Size": 47.0,
     "Environment Size": 1146.0,
-    "Image Size": 1212.51,
-    "Computational Performance 4": 30.43,
-    "Computational Performance 7": 20.19,
-    "Computational Performance 12": 20.21,
-    "Computational Performance 20": 20.21,
-    "Computational Performance 34": 20.24,
-    "Computational Performance 58": 20.29,
-    "Computational Performance 100": 20.37
+    "Image Size": 1371.52,
+    "Computational Performance 4": 32.07,
+    "Computational Performance 7": 22.04,
+    "Computational Performance 12": 21.69,
+    "Computational Performance 20": 21.53,
+    "Computational Performance 34": 21.73,
+    "Computational Performance 58": 21.92,
+    "Computational Performance 100": 22.37
 }
