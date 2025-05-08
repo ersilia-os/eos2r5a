@@ -43,10 +43,6 @@ Below are the **Output Columns** of the model:
 - **Environment Size (Mb):** `1146`
 - **Image Size (Mb):** `1371.52`
 
-**Computational Performance (seconds):**
-- 4 inputs: `32.07`
-- 20 inputs: `21.53`
-- 100 inputs: `22.37`
 
 ### References
 - **Source Code**: [https://github.com/reymond-group/RAscore](https://github.com/reymond-group/RAscore)
