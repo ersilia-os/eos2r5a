@@ -38,6 +38,7 @@
     "License": "MIT",
     "Contributor": "miquelduranfrigola",
     "Incorporation Date": "2021-10-19",
+    "Release": "v1.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2r5a.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos2r5a",
     "Docker Architecture": [
