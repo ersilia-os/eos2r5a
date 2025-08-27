@@ -4,6 +4,7 @@ Retrosynthetic accessibility score based on the computer aided synthesis plannin
 
 This model was incorporated on 2021-10-19.
 
+
 ## Information
 ### Identifiers
 - **Ersilia Identifier:** `eos2r5a`
@@ -13,7 +14,7 @@ This model was incorporated on 2021-10-19.
 - **Task:** `Annotation`
 - **Subtask:** `Property calculation or prediction`
 - **Biomedical Area:** `Any`
-- **Target Organism:** `Not Applicable`
+- **Target Organism:** `Any`
 - **Tags:** `Synthetic accessibility`, `Chemical synthesis`
 
 ### Input
