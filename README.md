@@ -2,7 +2,7 @@
 
 Retrosynthetic accessibility score based on the computer aided synthesis planning tool AiZynthfinder. The authors have selected a ChEMBL subset of 200.000 molecules, and checked whether AiZinthFinder could identify a synthetic route or not. This data has been trained to create a classifier that computes 4500 times faster than the underlying AiZynthFinder. Molecules outside the applicability domain, such as the GBD database, need to be fine tuned to their use case.
 
-This model was incorporated on 2021-10-19.Last packaged on 2025-08-27.
+This model was incorporated on 2021-10-19.Last packaged on 2025-09-15.
 
 ## Information
 ### Identifiers
@@ -41,12 +41,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `47`
 - **Environment Size (Mb):** `1158`
-- **Image Size (Mb):** `1325.13`
+- **Image Size (Mb):** `1325.6`
 
 **Computational Performance (seconds):**
-- 10 inputs: `27.33`
-- 100 inputs: `17.28`
-- 10000 inputs: `75.79`
+- 10 inputs: `27.71`
+- 100 inputs: `17.54`
+- 10000 inputs: `75.52`
 
 ### References
 - **Source Code**: [https://github.com/reymond-group/RAscore](https://github.com/reymond-group/RAscore)
