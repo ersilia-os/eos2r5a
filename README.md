@@ -50,7 +50,7 @@ Below are the **Output Columns** of the model:
 
 ### References
 - **Source Code**: [https://github.com/reymond-group/RAscore](https://github.com/reymond-group/RAscore)
-- **Publication**: [https://pubs.rsc.org/en/content/articlelanding/2021/sc/d0sc05401a](https://pubs.rsc.org/en/content/articlelanding/2021/sc/d0sc05401a)
+- **Publication**: [https://doi.org/10.1039/D0SC05401A](https://doi.org/10.1039/D0SC05401A)
 - **Publication Type:** `Peer reviewed`
 - **Publication Year:** `2021`
 - **Ersilia Contributor:** [miquelduranfrigola](https://github.com/miquelduranfrigola)
