@@ -1,6 +1,6 @@
 # Retrosynthetic accessibility score
 
-Rates how likely a molecule is to be reachable by computer-aided retrosynthesis, expressed as a probability rather than a heuristic complexity count. Thakkar and colleagues generated the training labels by running a retrosynthesis planner over a large compound set and recording which targets it could solve, then fitted a fast classifier to reproduce that outcome without rerunning the search. The score therefore reflects what one particular planner and its reaction rules could achieve, not synthesisability in absolute terms.
+Rates how likely a molecule is to be reachable by computer-aided retrosynthesis, expressed as a probability rather than a heuristic complexity count. Thakkar and colleagues ran AiZynthFinder over 200,000 ChEMBL compounds, recorded which targets it solved, and fitted a classifier that reproduces the outcome at least 4,500 times faster than the search itself. The score reflects what one planner and its reaction templates could achieve, so chemistry far from ChEMBL, such as GDB enumerations, needs the model refitted.
 
 This model was incorporated on 2021-10-19.Last packaged on 2025-09-15.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2021-10-19.Last packaged on 2025-09-15.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability that a retrosynthesis planner can find a route to the molecule.
+- **Interpretation:** Probability that AiZynthFinder can find a synthetic route, higher values meaning easier retrosynthetic accessibility.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
