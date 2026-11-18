@@ -2,7 +2,8 @@
 
 Rates how likely a molecule is to be reachable by computer-aided retrosynthesis, expressed as a probability rather than a heuristic complexity count. Thakkar and colleagues ran AiZynthFinder over 200,000 ChEMBL compounds, recorded which targets it solved, and fitted a classifier that reproduces the outcome at least 4,500 times faster than the search itself. The score reflects what one planner and its reaction templates could achieve, so chemistry far from ChEMBL, such as GDB enumerations, needs the model refitted.
 
-This model was incorporated on 2021-10-19.Last packaged on 2025-09-15.
+This model was incorporated on 2021-10-19.
+Last packaged on 2025-09-15.
 
 ## Information
 ### Identifiers
@@ -37,6 +38,7 @@ Below are the **Output Columns** of the model:
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos2r5a](https://hub.docker.com/r/ersiliaos/eos2r5a)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2r5a.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2r5a.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos2r5a_v1.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos2r5a_v1.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `47`
